@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" class="html">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./assets/icon/book.png">
+  <link rel="stylesheet" href="./assets/css/tailwind.css">
+  <title>Bookshelf-app</title>
+</head>
+
+<body id="body" class="bg-gray-600">
+  <div class="max-w-3xl sm:max-w-2xl md:max-w-3xl mx-auto my-10 text-gray-800 dark:text-gray-200">
+    <div
+      class="bg-gray-200 dark:bg-gray-800 rounded-lg mx-2 py-3 border-transparent shadow-md rounded-bl-none rounded-br-none grid justify-items-center">
+      <h1 class="text-3xl font-semibold text-center">Bookshelf</h1>
+      <button id="changeTheme" class="shadow-md transform hover:-translate-y-0.5 transition-all mr-4 mt-2 rounded-full">
+        <svg class="w-8 h-8 text-gray-200 dark:text-gray-800 p-1 bg-gray-800 dark:bg-gray-200 rounded-full"
+          fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+        </svg>
+      </button>
+    </div>
+    <div
+      class="bg-gray-200 dark:bg-gray-800 border border-b-0 border-gray-400 dark:border-gray-600 shadow-md mx-2 py-3">
+      <form action="#" id="form">
+        <div class="flex border border-gray-300 dark:border-gray-700 rounded bg-gray-300 dark:bg-gray-700 my-5 mx-4">
+          <svg class="w-8 h-8 bg-gray-300 dark:bg-gray-700 pt-2" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M8 4a3 3 0 00-3 3v4a5 5 0 0010 0V7a1 1 0 112 0v4a7 7 0 11-14 0V7a5 5 0 0110 0v4a3 3 0 11-6 0V7a1 1 0 012 0v4a1 1 0 102 0V7a3 3 0 00-3-3z"
+              clip-rule="evenodd"></path>
+          </svg>
+          <input type="text" id="title"
+            class="w-full rounded bg-gray-300 dark:bg-gray-700 placeholder-gray-500 dark:placeholder-gray-400 p-2"
+            name="title" placeholder="Title" autocomplete="off" autocorrect="off" spellcheck="false" required>
+        </div>
+        <div class="flex border border-gray-300 dark:border-gray-700 rounded bg-gray-300 dark:bg-gray-700 my-5 mx-4">
+          <svg class="w-8 h-8 bg-gray-300 dark:bg-gray-700 pt-2" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z"
+              clip-rule="evenodd"></path>
+          </svg>
+          <input type="text" id="author"
+            class="w-full rounded bg-gray-300 dark:bg-gray-700 placeholder-gray-500 dark:placeholder-gray-400 p-2"
+            name="author" placeholder="Author" autocomplete="off" autocorrect="off" spellcheck="false" required>
+        </div>
+        <div class="flex border border-gray-300 dark:border-gray-700 rounded bg-gray-300 dark:bg-gray-700 my-5 mx-4">
+          <svg class="w-8 h-8 bg-gray-300 dark:bg-gray-700 pt-2" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+              clip-rule="evenodd"></path>
+          </svg>
+          <input type="number" id="year"
+            class="w-full rounded bg-gray-300 dark:bg-gray-700 placeholder-gray-500 dark:placeholder-gray-400 p-2"
+            name="year" placeholder="Year" autocomplete="off" autocorrect="off" spellcheck="false" required>
+        </div>
+        <div class="flex justify-start items-center mx-4">
+          <input type="checkbox" id="completed" name="completed">
+          <label for="completed" class="w-full font-semibold pl-2 cursor-pointer">Completed</label>
+        </div>
+        <div class="flex mt-4 mb-2">
+          <button
+            class="w-full bg-blue-600 px-2 py-1 text-md font-medium text-center text-gray-200 mx-4 rounded transition-all hover:bg-blue-500 ring transform hover:-translate-y-0.5">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="border-2 border-t-0 border-b-0 border-gray-800 dark:border-gray-300 border-dashed pb-16 mx-2 shadow-xl">
+    </div>
+    <div
+      class="bg-gray-300 dark:bg-gray-800 border border-gray-600 border-b-0 mx-2 py-3 border-transparent border-t-none rounded-lg rounded-tl-none rounded-tr-none shadow-md flex px-2">
+      <svg class="w-8 h-8 text-gray-800dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+      </svg>
+      <form action="#" id="book-form" class="w-full flex mx-3">
+        <input type="text" id="title-search"
+          class="w-full bg-transparent focus:outline-none pl-2 text-xl placeholder-gray-600 dark:placeholder-gray-200 text-gray-800 dark:text-gray-200"
+          placeholder="Search a book (by title)" value="" autofocus="" aria-label="Search a book (by title)"
+          autocorrect="off" autocomplete="off" spellcheck="false" required>
+        <button type="submit"
+          class="bg-blue-600 px-2 py-1 text-md font-medium text-gray-200 inline-flex items-center space-x-2 rounded transition-all hover:bg-blue-500 ring transform hover:-translate-y-0.5">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 9a2 2 0 114 0 2 2 0 01-4 0z"></path>
+            <path fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a4 4 0 00-3.446 6.032l-2.261 2.26a1 1 0 101.414 1.415l2.261-2.261A4 4 0 1011 5z"
+              clip-rule="evenodd"></path>
+          </svg>
+          <span>Search</span>
+        </button>
+      </form>
+    </div>
+
+    <h2 id="uncompleted-title"
+      class="mt-4 inline-flex justify-center text-md font-semibold bg-red-500 text-gray-200 p-1 my-2 mx-4 px-2 transform hover:-rotate-3 transition-all">
+      Uncompleted</h2>
+    <div id="uncompleted-container" class="bg-gray-400 dark:bg-gray-800 mx-4 rounded-sm p-4">
+
+    </div>
+
+    <h2 id="completed-title"
+      class="mt-4 inline-flex justify-center text-md font-semibold bg-green-500 text-gray-200 p-1 my-2 mx-4 px-2 transform hover:-rotate-3 transition-all">
+      Completed</h2>
+    <div id="completed-container" class="bg-gray-400 dark:bg-gray-800 mx-4 rounded-sm p-4">
+
+    </div>
+
+    <div id="searchResult" class="hidden"></div>
+  </div>
+
+  <script src="./assets/js/darkmode.js"></script>
+  <script src="./assets/js/base.js"></script>
+  <script src="./assets/js/data.js"></script>
+  <script src="./assets/js/dom.js"></script>
+  <script src="./assets/js/app.js"></script>
+</body>
+
+</html>

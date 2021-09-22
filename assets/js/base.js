@@ -1,0 +1,15 @@
+const elements =  {
+  body: document.getElementById('body'),
+  title: document.getElementById('title'),
+  author: document.getElementById('author'),
+  year: document.getElementById('year'),
+  completed: document.getElementById('completed'),
+  uncompletedTitle: document.getElementById('uncompleted-title'),
+  completedTitle: document.getElementById('completed-title'),
+  listUncompleted: document.getElementById('uncompleted-container'),
+  listCompleted: document.getElementById('completed-container'),
+  form: document.getElementById('form'),
+  searchForm: document.getElementById('book-form'),
+  searchResult: document.getElementById('searchResult'),
+  modal: document.getElementById('modal'),
+};
